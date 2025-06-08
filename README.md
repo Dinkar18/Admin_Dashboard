@@ -8,7 +8,7 @@ A modern, fully responsive Admin Dashboard built with **React**, **Tailwind CSS*
 
 > Place your screenshot image in the project root (e.g., `screenshot.png`) or inside a `/screenshots` folder and update the path below.
 
-![Dashboard Preview](./ScreenShot475)
+![Dashboard Screenshot](./screenshots/screenshot.png)
 
 ---
 
