@@ -6,7 +6,6 @@ A modern, fully responsive Admin Dashboard built with **React**, **Tailwind CSS*
 
 ## 📸 Screenshot
 
-> Place your screenshot image in the project root (e.g., `screenshot.png`) or inside a `/screenshots` folder and update the path below.
 
 ![Dashboard Screenshot](./screenshots/screenshot.png)
 
@@ -31,8 +30,4 @@ A modern, fully responsive Admin Dashboard built with **React**, **Tailwind CSS*
 - **Moment.js**
 - **React Icons**
 - **MUI Modal**
-
----
-
-## 📂 Folder Structure
 
