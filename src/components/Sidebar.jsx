@@ -5,6 +5,7 @@ import { FaCalendarAlt, FaRegUserCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Context } from "../context/contextApi";
 import { MdSpaceDashboard, MdViewKanban, MdAdminPanelSettings} from "react-icons/md";
+     import { MdHelpOutline, MdContactMail } from "react-icons/md";
 
 export default function Sidebar({ setShowSidebar }) {
   const { themeMode } = useContext(Context);
@@ -15,7 +16,7 @@ export default function Sidebar({ setShowSidebar }) {
   const hoverText = themeMode === "dark" ? "hover:text-black" : "hover:text-white";
 
   return (
-    <div className="bg-gradient-to-b from-[#121212] to-[#1e1e1e] dark:from-[#f5f5f5] dark:to-[#e8e8e8] font-[Montserrat] text-white dark:text-black py-12 rounded-2xl w-full h-full flex flex-col justify-between items-center relative shadow-xl">
+    <div className="bg-gradient-to-b from-[#56db3b] to-[#dfba06] dark:from-[#43a8d7] dark:to-[#f4f3f3] font-[Montserrat] text-white white:text-black py-12 rounded-2xl w-full h-full flex flex-col justify-between items-center relative shadow-xl">
       {/* Close Icon on Sidebar (only on small screens) */}
       <div
         onClick={() => setShowSidebar(false)}
@@ -53,14 +54,25 @@ export default function Sidebar({ setShowSidebar }) {
         </div>
       </div>
 
-      <div className="contact text-start w-1/2 flex flex-col text-sm text-gray-400 space-y-2 mt-8">
-        <a href="https://dinkar-arya-portfolio.netlify.app/" className="hover:underline hover:text-[#5CE1E6] transition">
-          Help
-        </a>
-        <a href="https://dinkar-arya-portfolio.netlify.app/#contact" className="hover:underline hover:text-[#5CE1E6] transition">
-          Contact us
-        </a>
-      </div>
+
+<div className="contact text-start w-1/2 flex flex-col text-sm text-white-400 space-y-2 mt-8">
+  <a
+    href="https://dinkar-arya-portfolio.netlify.app/"
+    className="hover:underline hover:text-[#52e5ea] transition flex items-center space-x-2"
+  >
+    <MdHelpOutline />
+    <span>Help</span>
+  </a>
+
+  <a
+    href="https://dinkar-arya-portfolio.netlify.app/#contact"
+    className="hover:underline hover:text-[#52e5ea] transition flex items-center space-x-2"
+  >
+    <MdContactMail />
+    <span>Contact us</span>
+  </a>
+</div>
+
     </div>
   );
 }

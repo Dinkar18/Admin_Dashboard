@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { FiMenu } from "react-icons/fi";
+import { UserIcon } from '@heroicons/react/24/solid'; // Install: npm i @heroicons/react
+
 import { MdDarkMode, MdOutlineLightMode } from "react-icons/md";
 import { FaRegBell } from "react-icons/fa";
 import { BiSearch } from "react-icons/bi";
 import useTheme, { Context } from "../context/contextApi";
 import { useContext } from "react";
-import avatar from "../images/avatar.png";
 import { Link } from "react-router-dom";
 
 export default function Navbar({ showSidebar, setShowSidebar }) {
@@ -57,13 +58,19 @@ export default function Navbar({ showSidebar, setShowSidebar }) {
             color={themeMode === "dark" ? "white" : "black"}
           />
         </div>
-        <Link to="#" onClick={()=> alert("Dinkar Arya")}>
-          <img
-            className="w-9 h-9 rounded-full"
-            src={user?.img || avatar}
-            alt="profile"
-          />
-        </Link>
+
+<Link to="#" onClick={() => alert("Dinkar Arya")}>
+  {user?.img ? (
+    <img
+      className="w-9 h-9 rounded-full"
+      src={user.img}
+      alt="profile"
+    />
+  ) : (
+    <UserIcon className="w-9 h-9 text-gray-600 bg-gray-200 rounded-full p-1" />
+  )}
+</Link>
+
       </div>
 
       {/* Hamburger only shows on small screen */}
